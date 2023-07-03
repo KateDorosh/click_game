@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { Button } from "@mui/material";
 import { BrowserView, MobileView } from "react-device-detect";
-import { DashBoard } from "@/components/DashBoard/DashBoard";
+import { DashBoard } from "../components/DashBoard/DashBoard";
 import { Description } from "@/components/Description/Description";
 import Modal from "@/components/Modal/Modal";
 import Share from "@/components/Share";

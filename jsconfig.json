@@ -6,6 +6,7 @@
       "@/utils/*": ["utils/*"],
       "@/hooks/*": ["hooks/*"],
       "@/layouts/*": ["layouts/*"],
+      "@/styles/*": ["styles/*"],
     }
   }
 }

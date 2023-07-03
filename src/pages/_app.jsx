@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
-import { AuthProvider } from "@/hooks/rootContext/rootContext";
-import Header from "@/layouts/Header/Header";
-import { Footer } from "@/layouts/Footer/Footer";
+import { AuthProvider } from "../hooks/rootContext/rootContext";
+import Header from "../layouts/Header/Header";
+import { Footer } from "../layouts/Footer/Footer";
 import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
