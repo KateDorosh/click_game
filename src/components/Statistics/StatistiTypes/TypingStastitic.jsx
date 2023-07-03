@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@mui/material";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import useOperator from "@/hooks/rootContext/useOperator";
 import useContext from "@/hooks/rootContext/useContext";
@@ -47,7 +46,7 @@ export const TypingStastitic = ({ stats }) => {
           onClick={() => {
             resetTypingTest();
             generateNewWords();
-            changeTimer(data.timer/1000);
+            changeTimer(data.timer / 1000);
           }}
         >
           <RestartAltIcon className="icon-restart" />

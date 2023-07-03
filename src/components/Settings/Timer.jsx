@@ -1,9 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import useContext from "@/hooks/rootContext/useContext";
 import useOperator from "@/hooks/rootContext/useOperator";
 import paramsResolver from "@/utils/paramsResolver";
-import pathResolver from "@/utils/pathResolver";
 import { useRouter } from "next/router";
 
 export const Timer = ({ changeTimer, timer, type }) => {
@@ -50,7 +48,7 @@ export const Timer = ({ changeTimer, timer, type }) => {
     }
   };
   const clickOptions = [1, 3, 5, 10];
-  const clickOptions2 =  [ 15, 30, 60, 100];
+  const clickOptions2 = [15, 30, 60, 100];
   const timerOptions = [30, 60, 120, 180];
   const timerOptions2 = [, 240, 300, 420, 600];
 
@@ -79,7 +77,7 @@ export const Timer = ({ changeTimer, timer, type }) => {
                     ? 1
                     : el === 120
                     ? 2
-                    : el === 180 && 3} {" "}
+                    : el === 180 && 3}{" "}
                   {el < 60 ? "seconds" : el === 60 ? "minute" : "minutes"}
                 </p>
               ))}
@@ -113,38 +111,38 @@ export const Timer = ({ changeTimer, timer, type }) => {
             </div>
           </>
         ) : (
-         <>
-         <div className="timerOptions">
-          { clickOptions.map((el) => (
-            <div
-              className="SettingsTimerBtn"
-              key={el}
-              onClick={() => goTo(el)}
-              style={{
-                background:
-                  timer === el * 1000 && !isloading ? "#3f474f" : "#212529",
-              }}
-            >
-              {el} {" "}{el === 1 ? "Second" : "Seconds"}
+          <>
+            <div className="timerOptions">
+              {clickOptions.map((el) => (
+                <div
+                  className="SettingsTimerBtn"
+                  key={el}
+                  onClick={() => goTo(el)}
+                  style={{
+                    background:
+                      timer === el * 1000 && !isloading ? "#3f474f" : "#212529",
+                  }}
+                >
+                  {el} {el === 1 ? "Second" : "Seconds"}
+                </div>
+              ))}
             </div>
-          ))}
-         </div>
-         <div className="timerOptions2">
-         { clickOptions2.map((el) => (
-            <div
-              className="SettingsTimerBtn"
-              key={el}
-              onClick={() => goTo(el)}
-              style={{
-                background:
-                  timer === el * 1000 && !isloading ? "#3f474f" : "#212529",
-              }}
-            >
-              {el}{" "} {el === 1 ? "Second" : "Seconds"}
+            <div className="timerOptions2">
+              {clickOptions2.map((el) => (
+                <div
+                  className="SettingsTimerBtn"
+                  key={el}
+                  onClick={() => goTo(el)}
+                  style={{
+                    background:
+                      timer === el * 1000 && !isloading ? "#3f474f" : "#212529",
+                  }}
+                >
+                  {el} {el === 1 ? "Second" : "Seconds"}
+                </div>
+              ))}
             </div>
-          ))}
-         </div>
-         </>
+          </>
         )}
       </div>
     </div>

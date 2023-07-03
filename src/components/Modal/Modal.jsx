@@ -2,7 +2,6 @@ import * as React from "react";
 
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -138,8 +137,10 @@ export default function Modal({ open, onClose, data }) {
           <HoverRating
             gago={calculateRating(
               data.clickInsecond,
-              router.pathname.includes("typing-speed-test") ? (totalTypesCorrect + correctTypesPerBox) *
-              (60 / (data.timer / 1000)) : data.score,
+              router.pathname.includes("typing-speed-test")
+                ? (totalTypesCorrect + correctTypesPerBox) *
+                    (60 / (data.timer / 1000))
+                : data.score,
               router.pathname
             )}
           />
