@@ -1,13 +1,7 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Menu, Sidebar, MenuItem, SubMenu } from "react-pro-sidebar";
-import { HiCursorClick } from "react-icons/hi";
-import { MdSpaceBar, MdKeyboardAlt } from "react-icons/md";
-import { RiMouseFill } from "react-icons/ri";
-import { CgScrollV } from "react-icons/cg";
-import { GiClick } from "react-icons/gi";
+import { Menu, Sidebar } from "react-pro-sidebar";
 import EachItem from "./MenuItem";
 import { useRouter } from "next/router";
 

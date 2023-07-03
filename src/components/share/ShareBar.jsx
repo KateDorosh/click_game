@@ -1,4 +1,3 @@
-import { Row, Col } from "react-bootstrap";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { FaRedditAlien } from "react-icons/fa";
@@ -8,43 +7,44 @@ import { Button } from "@mui/material";
 const domain = "http://clickplay.pro/";
 
 const ShareBar = () => {
-
   const handleWhatsAppClick = () => {
     const message = "Play fun click games! " + domain;
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(url, "_blank");
   };
 
   return (
     <div className="sharebar-container">
       <div className="social-row">
-      <Button
-        className="default-button"
-        size="sm"
-        href={
-          "https://www.facebook.com/sharer/sharer.php?u=" +
-          domain +
-          "&quote=" +
-          encodeURIComponent("Play fun click games! " + domain)
-        }
-        target="_blank"
-      >
-        <p className="social-text">Facebook</p>
-        <FaFacebookF className="social-icon" />
-      </Button>
+        <Button
+          className="default-button"
+          size="sm"
+          href={
+            "https://www.facebook.com/sharer/sharer.php?u=" +
+            domain +
+            "&quote=" +
+            encodeURIComponent("Play fun click games! " + domain)
+          }
+          target="_blank"
+        >
+          <p className="social-text">Facebook</p>
+          <FaFacebookF className="social-icon" />
+        </Button>
 
-      <Button
-        className="default-button social-outline"
-        size="sm"
-        href={
-          "https://twitter.com/intent/tweet?text=" +
-          encodeURIComponent("Play fun click games! " + domain)
-        }
-        target="_blank"
-      >
-        <p className="social-text">Twitter</p>
-        <BsTwitter className="social-icon" />
-      </Button>
+        <Button
+          className="default-button social-outline"
+          size="sm"
+          href={
+            "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent("Play fun click games! " + domain)
+          }
+          target="_blank"
+        >
+          <p className="social-text">Twitter</p>
+          <BsTwitter className="social-icon" />
+        </Button>
       </div>
 
       {/* <Col className="p-1" xs="2" style={{ maxWidth: "120px" }}>
@@ -82,34 +82,32 @@ const ShareBar = () => {
         </Button>
       </Col> */}
 
+      <div className="social-row reverse-social">
+        <Button
+          className="default-button"
+          size="sm"
+          href={
+            "https://www.reddit.com/submit?url=" +
+            domain +
+            "&title=" +
+            encodeURIComponent("Play fun click games! " + domain)
+          }
+          target="_blank"
+        >
+          <p className="social-text">Reddit</p>
+          <FaRedditAlien className="social-icon" />
+        </Button>
 
-<div className="social-row reverse-social">
-
-      <Button
-        className="default-button"
-        size="sm"
-        href={
-          "https://www.reddit.com/submit?url=" +
-          domain +
-          "&title=" +
-          encodeURIComponent("Play fun click games! " + domain)
-        }
-        target="_blank"
-      >
-        <p className="social-text">Reddit</p>
-        <FaRedditAlien className="social-icon" />
-      </Button>
-
-      <Button
-        className="default-button social-outline"
-        size="sm"
-        onClick={handleWhatsAppClick}
-        target="_blank"
-      >
-        <p className="social-text">WhatsApp</p>
-        <RiWhatsappFill className="social-icon" />
-      </Button>
-</div>
+        <Button
+          className="default-button social-outline"
+          size="sm"
+          onClick={handleWhatsAppClick}
+          target="_blank"
+        >
+          <p className="social-text">WhatsApp</p>
+          <RiWhatsappFill className="social-icon" />
+        </Button>
+      </div>
     </div>
   );
 };

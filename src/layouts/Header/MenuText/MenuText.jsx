@@ -1,9 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import useOperator from "@/hooks/rootContext/useOperator";
 
 export const MenuText = ({ links, type, changeTestType }) => {
-
   const router = useRouter();
 
   const goTo = (to, defTime) => {
@@ -20,7 +18,7 @@ export const MenuText = ({ links, type, changeTestType }) => {
             key={el.id}
             style={{
               color: router.pathname.includes(el.type) ? "#ADE0E4" : "white",
-              paddingRight: el.text === "Typing test" ? "0px":"15px"
+              paddingRight: el.text === "Typing test" ? "0px" : "15px",
             }}
           >
             {el.text}
