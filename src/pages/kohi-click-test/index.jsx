@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { DashBoard } from "../components/DashBoard/DashBoard";
 import { Description } from "@/components/Description/Description";
 import Modal from "@/components/Modal/Modal";
-import Share from "@/components/Share";
+import Share from "../components/share/index";
 import MoreGame from "@/components/MoreGame";
 import { Timer } from "@/components/Settings/Timer";
 import useContext from "@/hooks/rootContext/useContext";

@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { DashBoard } from "../components/DashBoard/DashBoard";
 import { Description } from "@/components/Description/Description";
 import Modal from "@/components/Modal/Modal";
-import Share from "@/components/Share";
+import Share from "../components/share/index";
 import MoreGame from "@/components/MoreGame";
 import useContext from "@/hooks/rootContext/useContext";
 import useOperator from "@/hooks/rootContext/useOperator";
