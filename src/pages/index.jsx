@@ -1,8 +1,8 @@
 import React from "react";
-import { DashBoard } from "../components/DashBoard/DashBoard";
+import { DashBoard } from "@/components/DashBoard/DashBoard";
 import { Description } from "@/components/Description/Description";
 import Modal from "@/components/Modal/Modal";
-import Share from "../components/share/index";
+import Share from "@/components/share/index";
 import MoreGame from "@/components/MoreGame";
 import { Timer } from "@/components/Settings/Timer";
 import { ChoseClickType } from "@/components/Settings/ChoseClickType";
